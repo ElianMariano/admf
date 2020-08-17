@@ -2,12 +2,12 @@ import React from 'react';
 
 import PageDefault from '../../components/PageDefault';
 
-function Payback(){
+function NotFound(){
     return (
         <PageDefault>
-            <h1>Payback</h1>
+            <h1>Página não encontrada</h1>
         </PageDefault>
-    )
+    );
 }
 
-export default Payback;
+export default NotFound;

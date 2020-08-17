@@ -5,6 +5,8 @@
     --color-light-blue: #567EE2;
     --color-light-grey: #9D9D9D;
     --color-text-dark-blue: #000A63;
+    --color-light-green: #39c551;
+    --color-lighter-blue: #a9bef3;
     --white: #FFF;
 }
 
@@ -27,4 +29,19 @@ a {
     min-height: calc(100vh - var(--bodyPaddingTop));
     display: flex;
     flex-direction: column;
+}
+
+.title {
+    color: var(--color-text-dark-blue);
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 28px;
+}
+
+.result-text {
+    color: var(--color-text-dark-blue);
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    margin-left: 5px;
 }

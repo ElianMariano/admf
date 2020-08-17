@@ -4,8 +4,8 @@ import PageDefault from '../../components/PageDefault';
 function Home(){
     return (
         <PageDefault>
-            Teste de pagina
-        </PageDefault>  
+            <h1>Home page</h1>
+        </PageDefault>
     );
 }
 

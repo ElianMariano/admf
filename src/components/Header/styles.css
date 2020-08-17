@@ -23,5 +23,9 @@
 }
 
 .buttons-div a + a{
-    margin-left: 10px;
+    margin-left: 5px;
+}
+
+.buttons-div a button {
+    margin: 0;
 }

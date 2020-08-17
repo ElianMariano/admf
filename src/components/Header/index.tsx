@@ -15,7 +15,7 @@ function Header() {
                 <Link to="/valor-futuro"><Button>Valor futuro</Button></Link>
                 <Link to="/valor-presente-liquido"><Button>Valor presente líquido</Button></Link>
                 <Link to="/payback"><Button>Payback</Button></Link>
-                <Link to="/tir"><Button>TIR</Button></Link>
+                <Link to="/tir"><Button>Taxa interna de retorno</Button></Link>
             </div>
         </header>
     );
