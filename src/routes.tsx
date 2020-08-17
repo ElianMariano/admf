@@ -6,17 +6,17 @@ import FutureValue from './pages/FutureValue';
 import LiquidPresentValue from './pages/LiquidPresentValue';
 import Payback from './pages/Payback';
 import PresentValue from './pages/PresentValue';
-import TRI from './pages/TRI';
+import TIR from './pages/TIR';
 
 function Routes(){
     return (
         <BrowserRouter>
             <Route exact path='/' component={Home} />
             <Route exact path='/valor-futuro' component={FutureValue} />
-            <Route exact path='/valor-liquido-presente' component={LiquidPresentValue} />
+            <Route exact path='/valor-presente-liquido' component={LiquidPresentValue} />
             <Route exact path='/valor-presente' component={PresentValue} />
             <Route path='/payback' component={Payback} />
-            <Route path='/tri' component={TRI} />
+            <Route path='/tir' component={TIR} />
         </BrowserRouter>
     );
 }

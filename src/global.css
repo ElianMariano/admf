@@ -1,0 +1,30 @@
+:root {
+    --color-background: #E1E1E3;
+    --color-primary: #2651BC;
+    --color-secondary: #4066C7;
+    --color-light-blue: #567EE2;
+    --color-light-grey: #9D9D9D;
+    --color-text-dark-blue: #000A63;
+    --white: #FFF;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    background-color: var(--color-background);
+}
+
+a {
+    color: inherit;
+}
+
+#root {
+    min-height: calc(100vh - var(--bodyPaddingTop));
+    display: flex;
+    flex-direction: column;
+}
