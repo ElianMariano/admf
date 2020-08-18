@@ -18,7 +18,7 @@ function PresentValue(){
             <Input
                 width='98%'
                 height='40px'
-                placeholder=' Taxa'
+                placeholder=' Taxa (em %)'
                 type='number'
             />
             <Input

@@ -8,7 +8,7 @@ import PlusButton from '../../components/PlusButton';
 import './styles.css';
 
 function LiquidPresentValue(){
-    const [cashFlows, setCashFlows] = useState<string[]>(['']);
+    const [cashFlows, setCashFlows] = useState(['']);
     const [rate, setRate] = useState('');
     const [periods, setPeriods] = useState('');
 
@@ -32,7 +32,7 @@ function LiquidPresentValue(){
                         key={`${index}_Id`}
                         width='98%'
                         height='40px'
-                        placeholder={`Perído ${index+1}`}
+                        placeholder={` Perído ${index}`}
                         type='number'
                         value={CF}
                         onChange={e => {
@@ -46,7 +46,7 @@ function LiquidPresentValue(){
             <Input
                 width='98%'
                 height='40px'
-                placeholder=' Taxa'
+                placeholder=' Taxa (em %)'
                 type='number'
                 value={rate}
                 onChange={e => setRate(e.target.value)}
@@ -54,7 +54,7 @@ function LiquidPresentValue(){
             <Input
                 width='98%'
                 height='40px'
-                placeholder=' Períodos'
+                placeholder=' Tempo'
                 type='number'
                 value={periods}
                 onChange={e => setPeriods(e.target.value)}
@@ -64,7 +64,7 @@ function LiquidPresentValue(){
 
             <h3 className='result-text'>Resultado: R$ 00,00</h3>
         </PageDefault>
-    )
+    );
 }
 
 export default LiquidPresentValue;
