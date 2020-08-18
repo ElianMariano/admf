@@ -31,7 +31,7 @@ function TIR(){
                         key={`${index}_Id`}
                         width='98%'
                         height='40px'
-                        placeholder={` Perído ${index}`}
+                        placeholder={` Período ${index}`}
                         type='number'
                         value={CF}
                         onChange={e => {

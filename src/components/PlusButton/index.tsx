@@ -18,8 +18,7 @@ const PlusButton = styled.button`
 
     transition: .5s opacity;
 
-    &:hover,
-    &:focus {
+    &:hover {
         opacity: 0.85;
     }
 `;

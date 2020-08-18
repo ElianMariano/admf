@@ -4,19 +4,30 @@ import PageDefault from '../../components/PageDefault';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import PlusButton from '../../components/PlusButton';
-
+import calculateVpl from '../../utils/calculateVpl';
 import './styles.css';
 
 function LiquidPresentValue(){
     const [cashFlows, setCashFlows] = useState(['']);
     const [rate, setRate] = useState('');
-    const [periods, setPeriods] = useState('');
+    const [result, setResult] = useState('R$ 0.0');
 
     function handleAdd(){
         setCashFlows([
             ...cashFlows,
             ''
         ]);
+    }
+
+    function handleCalculate(){
+        let fcs: number[] = [];
+
+        for (let i = 0;i < cashFlows.length;i++)
+            fcs.push(Number(cashFlows[i]));
+
+        const i = Number(rate);
+
+        setResult(`R$ ${calculateVpl(fcs, i).toFixed(2)}`);
     }
 
     return (
@@ -32,7 +43,7 @@ function LiquidPresentValue(){
                         key={`${index}_Id`}
                         width='98%'
                         height='40px'
-                        placeholder={` Perído ${index}`}
+                        placeholder={` Período ${index}`}
                         type='number'
                         value={CF}
                         onChange={e => {
@@ -43,6 +54,7 @@ function LiquidPresentValue(){
                     />
                 })}
             </div>
+
             <Input
                 width='98%'
                 height='40px'
@@ -51,18 +63,10 @@ function LiquidPresentValue(){
                 value={rate}
                 onChange={e => setRate(e.target.value)}
             />
-            <Input
-                width='98%'
-                height='40px'
-                placeholder=' Tempo'
-                type='number'
-                value={periods}
-                onChange={e => setPeriods(e.target.value)}
-            />
 
-            <Button width='200px'>Calcular</Button>
+            <Button width='200px' onClick={handleCalculate}>Calcular</Button>
 
-            <h3 className='result-text'>Resultado: R$ 00,00</h3>
+            <h3 className='result-text'>Resultado: {result}</h3>
         </PageDefault>
     );
 }
