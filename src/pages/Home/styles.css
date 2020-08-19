@@ -6,8 +6,19 @@
 
 .text-container p {
     color: var(--color-text-dark-blue);
-    text-align: center;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     text-align: justify;
+}
+
+.formula-title {
+    color: var(--color-text-dark-blue);
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.formulas-container {
+    align-items: center;
 }

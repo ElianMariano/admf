@@ -45,3 +45,11 @@ a {
     font-size: 24px;
     margin-left: 5px;
 }
+
+.formula-text {
+    color: var(--color-text-dark-blue);
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    margin-left: 5px;
+}

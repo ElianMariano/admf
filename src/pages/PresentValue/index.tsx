@@ -4,12 +4,16 @@ import PageDefault from '../../components/PageDefault';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import calculatePresentValue from '../../utils/calculatePresentValue';
+import MathJax from 'react-mathjax2';
+import './styles.css';
 
 function PresentValue(){
     const [futureValue, setFutureValue] = useState('');
     const [rate, setRate] = useState('');
     const [period, setPeriod] = useState('');
     const [result, setResult] = useState('R$ 0.00');
+
+    const vp = 'VP = (VF) / (1 + i)^t';
 
     function handleCalculate(){
         const v = Number(futureValue);
@@ -51,6 +55,19 @@ function PresentValue(){
             <Button width='200px' onClick={handleCalculate}>Calcular</Button>
 
             <h3 className='result-text'>Resultado: {result}</h3>
+
+            <div className="text-container">
+                <MathJax.Context>
+                    <h3 className="formula-text">Formula do valor presente: <MathJax.Node>{vp}</MathJax.Node></h3>
+                </MathJax.Context>
+
+                <p className="paragraph-text">
+                    A formula para calcular o valor presente obtêm o valor atual em dinheiro
+                    de um montante futuro, a partir desta formula é possível mensurar quanto
+                    em dinheiro poderá ser investido a uma determinada taxa de juros para
+                    que corresponda a um montante futuro.
+                </p>
+            </div>
         </PageDefault>
     );
 }

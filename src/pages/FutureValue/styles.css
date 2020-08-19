@@ -1,0 +1,12 @@
+.text-container {
+    margin: 0 auto;
+    padding: 4px;
+    width: 90%;
+}
+
+.paragraph-text {
+    color: var(--color-text-dark-blue);
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
