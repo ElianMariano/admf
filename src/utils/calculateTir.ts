@@ -1,13 +1,24 @@
 import calculateVpl from './calculateVpl';
 
 function calculateTir(fc: number[]){
-    let a = 0, b = 1;
+    let isZero = false;
+    for (let i = 0;i < fc.length;i++){
+        if (fc[i] !== 0)
+            isZero = true;
+    }
+
+    // Se todos os valores são zero, retorna zero
+    if (!isZero)
+        return 0;
+
+    let a = 300, b = 0;
     let i = 0;
+    let a_vpl = calculateVpl(fc, a);
+    let b_vpl = calculateVpl(fc, b);
 
-    console.log(calculateVpl(fc, a));
-    console.log(calculateVpl(fc, a));
+    const tol = 1/Math.pow(10, 5);
 
-    while(calculateVpl(fc, a) < 0 && calculateVpl(fc, b) > 0){
+    while((a_vpl < 0 && b_vpl > 0) && (b_vpl - a_vpl) > tol){
         const mid = (a+b)/2;
 
         if (calculateVpl(fc, mid) > 0){
@@ -16,7 +27,13 @@ function calculateTir(fc: number[]){
         else{
             a = mid;
         }
+
+        a_vpl = calculateVpl(fc, a);
+        b_vpl = calculateVpl(fc, b);
     }
+
+    if (((b_vpl - a_vpl) < tol))
+        i = a;
 
     return i;
 }

@@ -9,7 +9,7 @@ import './styles.css';
 
 function TIR(){
     const [cashFlows, setCashFlows] = useState(['']);
-    const [result, setResult] = useState('0%');
+    const [result, setResult] = useState('0.00%');
 
     function handleAdd(){
         setCashFlows([
@@ -24,7 +24,7 @@ function TIR(){
         for (let i = 0;i < cashFlows.length;i++)
             fcs.push(Number(cashFlows[i]));
 
-        setResult(`${(calculateTir(fcs)*100).toFixed(2)}%`)
+        setResult(`${(calculateTir(fcs)).toFixed(2)}%`)
     }
 
     return (
