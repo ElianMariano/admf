@@ -13,13 +13,20 @@ const PlusButton = styled.button`
     color: var(--white);
     border-width: 0;
     height: 40px;
-    width: ${(props: PlusButtonProps) => props.width};
+    width: 300px;
     margin: 5px;
 
     transition: .5s opacity;
 
     &:hover {
         opacity: 0.85;
+    }
+
+    @media (max-width: 700px){
+        & {
+            width: 100%;
+            margin: 5px auto;
+        }
     }
 `;
 

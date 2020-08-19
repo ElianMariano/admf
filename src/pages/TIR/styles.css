@@ -11,9 +11,10 @@
     margin-left: 10px;
     display: inline-block;
     font-size: 24px;
+    color: var(--color-text-dark-blue);
 }
 
-.fields-container h3 + button {
+.fields-container button {
     margin-left: 58%;
 }
 
@@ -28,4 +29,23 @@
     font-family: Roboto, sans-serif;
     font-size: 18px;
     text-align: justify;
+}
+
+@media (max-width: 700px) {
+    .fields-container {
+        width: auto;
+        text-align: center;
+    }
+
+    .fields-container h3 {
+        margin-left: 10px;
+        display: inline-block;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .fields-container button {
+        width: 100%;
+        margin: 5px auto;
+    }
 }

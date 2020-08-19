@@ -40,7 +40,7 @@ function Payback(){
             <div className="fields-container">
                 <h3>Fluxos de caixa</h3>
 
-                <PlusButton width='300px' onClick={handleAdd}>Adicionar</PlusButton>
+                <PlusButton onClick={handleAdd}>Adicionar</PlusButton>
                 {cashFlows.map((CF, index) => {
                     return <Input
                         key={`${index}_Id`}

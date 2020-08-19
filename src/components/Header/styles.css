@@ -29,3 +29,28 @@
 .buttons-div a button {
     margin: 0;
 }
+
+@media (max-width: 700px){
+    .header-container h2 {
+        font-size: 32px;
+    }
+
+    .buttons-div a button {
+        margin: 4px auto;
+        width: 90%;
+    }
+
+    .buttons-div a:first-child button{
+        margin-left: 6px;
+        width: 89.5%;
+    }
+
+    .buttons-div a button + a button::before {
+        margin-left: auto;
+        margin-left: auto;
+    }
+
+    .header-container {
+        height: auto;
+    }
+}

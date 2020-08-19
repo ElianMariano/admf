@@ -53,3 +53,13 @@ a {
     font-size: 18px;
     margin-left: 5px;
 }
+
+@media (max-width: 700px){
+    .title {
+        font-size: 24px;
+    }
+
+    .formula-text {
+        font-size: 14px;
+    }
+}
