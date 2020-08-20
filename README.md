@@ -1,4 +1,4 @@
-# AdministracaoFinanceira
+# Viabilidade de projetos em Adiministração Financeira
 Aplicação desenvolvida com ReactJs que calcula formulas de administração financeira.
 
 <img alt="Administração financeira" src="assets/admf.png" width="80%" />
