@@ -28,6 +28,7 @@ function PresentValue(){
             <h2 className='title'>Valor Presente</h2>
 
             <Input
+                id="valor_futuro"
                 width='98%'
                 height='40px'
                 placeholder=' Valor futuro'
@@ -36,6 +37,7 @@ function PresentValue(){
                 onChange={e => setFutureValue(e.target.value)}
             />
             <Input
+                id="taxa_valor_futuro"
                 width='98%'
                 height='40px'
                 placeholder=' Taxa (em %)'
@@ -44,6 +46,7 @@ function PresentValue(){
                 onChange={e => setRate(e.target.value)}
             />
             <Input
+                id="periodos_valor_futuro"
                 width='98%'
                 height='40px'
                 placeholder=' Períodos'
@@ -52,9 +55,9 @@ function PresentValue(){
                 onChange={e => setPeriod(e.target.value)}
             />
 
-            <Button width='200px' onClick={handleCalculate}>Calcular</Button>
+            <Button id="submit" width='200px' onClick={handleCalculate}>Calcular</Button>
 
-            <h3 className='result-text'>Resultado: {result}</h3>
+            <h3 id="resultado" className='result-text'>Resultado: {result}</h3>
 
             <div className="text-container">
                 <MathJax.Context>
